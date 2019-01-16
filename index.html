@@ -55,7 +55,12 @@
     <section>
         <h1>Conference Registration Form</h1>
         <p>Required Item (*)</p>
+
+        <!-- The 'form' element is what creates the survey/form within the website. It contains everything that is needed to make a survey; from validation to sliders to data lists. -->
+
         <form action="http://www.example.com/cg/register" method="POST" />
+
+        <!-- This section of code is responsible for formating all of the input boxes & a single textarea element. Every input element is given a different name & id. Some input elements have the attribute 'required'. This allows a message to pop up to notify the user should they hit the submit button without completing a specific field. The 'datalist' element contains a list of suggested values that the user could pick from for that field, if they so choose. -->
 
         <label for="title">Title</label>
         <input type="text" name="title" id="titleBox" list="titleList" />
@@ -65,7 +70,7 @@
             <option value="Ms."></option>
             <option value="Prof."></option>
             <option value="Dr."></option>
-            <option value="Assit. Prof."></option>
+            <option value="Assist. Prof."></option>
             <option value="Assoc. Prof."></option>
         </datalist>
 
@@ -84,11 +89,15 @@
         <label for="email">E-mail*</label>
         <input type="email" name="email" id="mailBox" required />
 
+        <!-- These next two input elements also have a 'pattern' attribute. This attribute determines whether or not a string of text is entered in a certain way to create a specific pattern, a phone number for example. -->
+
         <label for="phoneNumber">Phone Number*</label>
         <input type="tel" name="phoneNumber" id="phoneBox" placeholder="(nnn) nnn-nnnn" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
 
         <label for="acgipID">ACGIP Membership Number</label>
         <input type="text" name="acgipID" id="idBox" placeholder="acgip-nnnnnn" pattern=^"acgip\-\d{6}$" />
+
+        <!-- This block of code is similar to the 'datalist' element. The only noticeable difference being that this is a selection list. This list provides a number of pre-selected options that the user could choose from, but cannot change. -->
 
         <label for="regList">Registration Category</label>
         <select name="registerType" id="regList">
@@ -98,6 +107,8 @@
             <option value="poster">Poster ($95)</option>
             <option value="guest">Guest ($35)”</option>
         </select>
+
+        <!-- This paragraph element contains an input element that has a type of 'submit' & a value of 'Continue'. The type turns the input box into a button that will submit the survey. -->
 
         <p><input type="submit" value="Continue"></p>
 

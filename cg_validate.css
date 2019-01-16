@@ -20,11 +20,21 @@ textarea:focus {
     background-color: rgb(245, 245, 140);
 } */
 
-input:focus,
+/* This block of code is responsible for applying a background color to every select, textarea, & input element except the input element with the type of 'Continue', since it's the only input element without an id. Because of the 'focus' psuedo class, the color is only shown when the user has clicked on the input box. */
+
+input#fnBox:focus,
+input#inBox:focus,
+input#groupBox:focus,
+input#mailBox:focus,
+input#phoneBox:focus,
+input#idBox:focus,
+input#titleBox:focus,
 select:focus,
 textarea:focus {
     background-color: rgb(245, 245, 140);
 }
+
+/* This block of code applies a background image & color for every element with the ids of 'fnBox', 'inBox', 'mailBox', 'idBox', & 'phoneBox'. The 'valid' & 'invalid' psuedo class determines whether or not the field values passes or fails a validation test. Both style rules are given different colors & different images.*/
 
 #fnBox:focus:valid,
 #inBox:focus:valid,
